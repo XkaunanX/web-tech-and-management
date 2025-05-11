@@ -1,0 +1,127 @@
+/*-- LAYOUT DE LA PÁGINA------------------------------*/
+
+#menu { 
+	clear: both; 
+}
+
+#lateral { 
+	float: left; 
+	width: 20%; 
+}
+
+#contenido { 
+	float: right; 
+	width: 78%; 
+}
+
+#contenido #principal { 
+	float: left; 
+	width: 78%; 
+}
+
+#contenido #secundario { 
+	float: right; 
+	width: 20%; 
+}
+
+#pie { 
+	clear: both; 
+}
+
+#pie .enlaces { 
+	float: left; 
+}
+
+#pie .copyright { 
+	float: right; 
+}
+
+#cabecera { 
+	clear: both; 
+}
+
+#cabecera #logo { 
+	float: left; 
+}
+
+#cabecera #buscador { 
+	float: right; 
+}
+
+/*-- ESTILOS PEDIDOS ------------------------------*/
+
+body {
+	font: .9em/1.4 Arial, Helvetica, sans-serif;
+	color: #000;
+}
+
+.articulo h2 {
+	color: #CC6600;
+	font-size: 1.6em;
+	line-height: 1.2;
+	margin-bottom: .3em;
+}
+
+.articulo a, #lateral #publicidad a {
+	color: #CC6600;
+}
+
+.articulo p {
+	margin: .3em 0;
+}
+
+#menu {
+	margin-right: 1em;
+}
+
+#menu a {
+	color: #FFF;
+	font-size: 1.3em;
+}
+
+#lateral {
+	font-size: .9em;
+}
+
+#lateral #noticias .fecha {
+	display: block;
+	color: #999;
+}
+
+#lateral #noticias h3 {
+	color: #003366;
+}
+
+#lateral #publicidad {
+	margin-top: 1em;
+	border: 1px dashed #CC6600;
+	background: #FFF6CD;
+	color: #555;
+}
+
+#contenido #secundario {
+	border: 1px solid #CC6600;
+	float: right; 
+	width: 20%;
+}
+
+#contenido #secundario #header {
+	background: #DB905C;
+	padding: .2em;
+	font-size: 1em;
+	color: #FFFFFF;
+}
+
+#contenido #secundario p {
+	margin: .5em 0;
+}
+
+#pie {
+	padding: .5em 0;
+	margin-top: 1em;
+	border-top: 1px solid #C5C5C5;
+	border-bottom: 1px solid #C5C5C5;
+	background: #F8F8F8;
+	color: #555;
+	font-size: .75em;
+}

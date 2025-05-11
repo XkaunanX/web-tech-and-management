@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+    <title>Ejercicio 11 - CSS</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style type="text/css">
+
+        body {
+            margin: 30px;    
+        }
+        #contenedor {
+            width: 800px;
+            margin: 0 auto;
+            font: 15px Arial;
+            border: 1px solid #333;
+            border-collapse: collapse;
+        }
+
+        #header {
+            background-color: red;
+            text-align: center;
+            padding: 3px;
+        }
+
+        #nav {
+            background-color: orange;
+            text-align: center;
+            padding: 3px;
+        }
+
+        ul li {
+            list-style-type: none;
+        }
+
+        #section {
+            background-color: yellow;
+            width: 68%;
+            float: left;
+            padding: 3px;
+        }
+
+        .article {
+            background-color: green;
+            width: 90%;
+            padding: 3px;
+            margin: 10px;
+        }
+
+        #aside {
+            background: blue;
+            width: 30%;
+            height: 200px;
+            float: right;
+            text-align: center;
+            padding: 3px;
+        }
+
+        #footer {
+            background-color: purple;
+            clear: both;
+            padding: 3px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="header">
+            <h1>Header</h1>
+        </div>
+
+        <div id="nav">
+            <ul>
+                <li><a href="#">Menu Opcion 1</a></li>
+                <li><a href="#">Menu Opcion 2</a></li>
+                <li><a href="#">Menu Opcion 3</a></li>
+            </ul>
+        </div>
+        
+        <div id="section">
+            <div class="article">
+                <p>Este es el primer artículo.</p>
+            </div>
+
+            <div class="article">
+                <p>Este es el segundo artículo.</p>
+            </div>
+
+            <div class="article">
+                <p>Este es el tercer artículo.</p>
+            </div>
+        </div>
+        
+        <div id="aside">
+            <div class="section">
+                <h1>Links</h1>
+                <ul>
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="footer">
+            Copyright TyG Web 2014
+        </div>
+    </div>
+</body>
+</html>

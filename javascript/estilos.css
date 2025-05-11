@@ -1,0 +1,146 @@
+.errores {
+	background-color: red;
+	font-size: 10px;
+	margin: 10px;
+	padding: 2px;
+	color: #FFF;
+}
+
+body {
+	font: 13px/1.6 Tahoma, sans-serif;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+#contenedor {
+	background: #FFF;
+	border: 1px solid silver;
+	margin: 1em auto;
+	padding: 1em;
+	width: 768px;
+}
+
+span.requerido {
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #C00;
+}
+
+h2 {
+	font: normal 2em arial, sans-serif;
+	margin: 0;
+}
+
+ul li.botones {
+	border-top: 2px solid #CCC;
+	padding: 1em 0;
+	margin-top: 1em;
+	text-align: right;
+	width: 100%;
+}
+
+ul li.botones input {
+	font-size: 1.3em;
+}
+
+ul li label.titulo {
+	font-weight: bold;
+}
+
+ul li div span {
+	float: left;
+	padding: 0.3em 0;
+}
+
+ul li div span.completo {
+	width: 100%;
+}
+
+ul li div span.mitad {
+	width: 50%;
+}
+
+ul li div span.tercio {
+	width: 33%;
+}
+
+ul li div span.dostercios {
+	width: 66%;
+}
+
+ul li div span label {
+	display: block;
+	font: normal 0.8em arial, sans-serif;
+	color: #333;
+}
+
+ul li {
+	overflow: hidden;
+	position: relative;
+	font-size: 11px;
+	border-top: 1px solid #CCC;
+	margin: 0;
+	padding: 1em;
+}
+
+ul li label.titulo {
+	float: left;
+	text-align: right;
+	width: 100px;
+}
+
+ul li div {
+margin-left: 110px;
+overflow: hidden;
+}
+
+ul li p.ayuda {
+	display: none;
+}
+
+input#apellido1, input#apellido2, input#direccion, input#email {
+	width: 260px;
+}
+
+input#codigopostal {
+	width: 80px;
+}
+
+select#provincia {
+	width: 90px;
+}
+
+select#pais, select#provincia {
+	width: 150px;
+}
+
+input#telefonofijo, input#telefonomovil {
+	width: 230px;
+	margin: 5px;
+}
+
+
+/* Cambiar el color en el :hover 
+	Resaltar los campos en el :focus
+	Que aparezca texto de ayuda con li:hover; */
+ul li:hover {
+	background-color: #FF9;
+}
+ul li.botones:hover {
+	background-color: transparent;
+}
+ul li input:focus {
+	border: 2px solid #E6B700;
+}
+
+ul li:hover p.ayuda {
+	display: block;
+	margin: 0.3em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 150px;
+}

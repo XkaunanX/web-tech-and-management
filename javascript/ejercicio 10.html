@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es">
+<head>
+	<title>Ejercicio 10</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<link rel="stylesheet" type="text/css" href="estilos.css">
+
+	<script src="http://code.jquery.com/jquery-1.10.2.js">
+	// Importamos la librería JQuery
+	</script>
+
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+			$(".errores").hide();
+
+			$("#mi_formulario").on("submit", function(e){
+				e.preventDefault();
+				var success = true;
+
+				if ($("#nombre").val() == "") {
+					success = false;
+					$("#error_nombre").slideDown();
+				}
+				else {
+					$("#error_nombre").slideUp();
+				}
+
+				if ($("#apellido1").val() == "") {
+					success = false;
+					$("#error_apellido1").slideDown();
+				}
+				else {
+					$("#error_apellido1").slideUp();
+				}
+
+				if ($("#email").val() == "" || $("#email").val().indexOf("@") == -1) {
+					success = false;
+					$("#error_email").slideDown();
+				}
+				else {
+					$("#error_email").slideUp();
+				}
+
+				if ($("#telefonofijo").val() == "" || 
+					$("#telefonofijo").val() != $("#telefonofijo").val().replace(/[^0-9\.]/g, '')) {
+					success = false;
+					$("#error_telefonofijo").slideDown();
+				}
+				else {
+					$("#error_telefonofijo").slideUp();
+				}
+
+				if ($("#telefonomovil").val() == "" || 
+					$("#telefonomovil").val() != $("#telefonomovil").val().replace(/[^0-9\.]/g, '')) {
+					success = false;
+					$("#error_telefonomovil").slideDown();
+				}
+				else {
+					$("#error_telefonomovil").slideUp();
+				}
+
+				if (success){
+					$(this).submit();
+				}
+			});
+		});
+
+	</script>
+
+</head>
+<body>
+	<div id="contenedor">
+		<h2>Formulario de alta</h2>
+		<form id="mi_formulario" method="post" action="#">
+			<ul>
+				<li>
+					<label class="titulo" for="nombre">Nombre y apellidos <span
+					class="requerido">*</span></label>
+					<div>
+						<span>
+							<input id="nombre" name="nombre" value="" type="text"/>
+							<label for="nombre">Nombre</label>
+							<span id="error_nombre" class="errores">El campo 'Nombre' es requerido</span>
+						</span>
+						<span>
+							<input id="apellido1" name="apellido1" value="" type="text"/>
+							<label for="apellido1">Primer apellido</label>
+							<span id="error_apellido1" class="errores">El campo 'Apellido1' es requerido</span>
+						</span>
+						<span>
+							<input id="apellido2" name="apellido2" value="" />
+							<label for="apellido2">Segundo apellido</label>
+						</span>
+					</div>
+					<p class="ayuda">No te olvides de escribir también tu segundo apellido</p>
+				</li>
+				<li>
+					<label class="titulo" for="direccion">Dirección</label>
+					<div>
+						<span>
+							<input id="direccion" name="direccion" value="" />
+							<label for="direccion">Calle, número, piso, puerta</label>
+						</span>
+						<span>
+							<input id="codigopostal" name="codigopostal" value="" />
+							<label for="codigopostal">Código postal</label>
+						</span>
+						<span>
+							<input id="municipio" name="municipio" value="" />
+							<label for="municipio">Municipio</label>
+						</span>
+						<span>
+							<select id="provincia" name="provincia">
+								<option value=""></option>
+								<option value="provincia1">Provincia 1</option>
+								<option value="provincia2">Provincia 2</option>
+								<option value="provincia3">Provincia 3</option>
+							</select>
+							<label for="provincia">Provincia</label>
+						</span>
+						<span>
+							<select id="pais" name="pais">
+								<option value=""></option>
+								<option value="pais1">País 1</option>
+								<option value="pais2">País 2</option>
+								<option value="pais3">País 3</option>
+							</select>
+							<label for="pais">País</label>
+						</span>
+					</div>
+					<p class="ayuda">El código postal es imprescindible para poder recibir los
+					pedidos</p>
+				</li>
+				<li>
+					<label class="titulo" for="email">Email <span
+					class="requerido">*</span></label>
+					<div>
+						<span>
+							<input id="email" name="email" value=""/>
+							<span id="error_email" class="errores">El campo 'Email' es requerido y debe contener '@'</span>
+						</span>
+					</div>
+					<p class="ayuda">Asegúrate de que sea válido</p>
+				</li>
+				<li>
+					<label class="titulo" for="telefonofijo">Teléfono <span
+					class="requerido">*</span></label>
+					<div>
+						<span>
+							<input id="telefonofijo" name="telefonofijo" value=""/>
+							<label for="telefonofijo">Fijo</label>
+							<span id="error_telefonofijo" class="errores">El campo 'Telefono Fijo' es requerido y debe ser numerico</span>
+						</span>
+						<span>
+							<input id="telefonomovil" name="telefonomovil" value=""/>
+							<label for="telefonomovil">Móvil</label>
+							<span id="error_telefonomovil" class="errores">El campo 'Telefono Movil' es requerido y debe ser numerico</span>
+						</span>
+					</div>
+					<p class="ayuda">Sin prefijo de país y sin espacios en blanco</p>
+				</li>
+				<li>
+					<input id="enviar" type="submit" value="Darme de alta &rarr;" />
+				</li>
+			</ul>
+		</form>
+	</div>
+</body>
+</html>

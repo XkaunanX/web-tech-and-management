@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Información sobre cadenas</title>
+		<script type="text/javascript">
+			function info(cadena) {
+				// Se utiliza + para concatenar
+				var resultado = "La cadena \"" + cadena + "\"";
+
+				// Comprobar mayúsculas y minúsculas
+				if(cadena == cadena.toUpperCase()) {
+					resultado += " está formada sólo por mayúsculas";
+				}
+				else if(cadena == cadena.toLowerCase()) {
+					resultado += " está formada sólo por minúsculas";
+				}
+				else {
+					resultado += " está formada por mayúsculas y minúsculas";
+				}
+				return resultado;
+			}
+
+			var cad = prompt("Introduce una cadena de caracteres");
+			alert(info(cad));
+		</script>
+	</head>
+	<body>
+		<p>Se ha mostrado una alerta de Javascript con información sobre la cadena ingresada</p>
+	</body>
+</html>

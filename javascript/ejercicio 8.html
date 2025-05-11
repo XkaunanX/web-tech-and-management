@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Ejercicio 8</title>
+
+<script src="http://code.jquery.com/jquery-1.10.2.js">
+// Importamos la librería JQuery
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('.enlace').on('click', function(e){
+            var elemento = $('#contenidos_' + $(this).attr('data-contenido'));
+            if ($(this).hasClass('oculto')){
+                $(this).removeClass('oculto');
+                $(this).html('Ocultar contenidos');
+                elemento.show();
+            }
+            else{
+                $(this).addClass('oculto');
+                $(this).html('Mostrar contenidos');
+                elemento.hide();
+            }
+        });
+    });
+
+
+</script>
+</head>
+
+<body>
+    <p id="contenidos_1">[1] Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu,
+    consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+    posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+    aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit
+    convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus
+    non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna
+    consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a class="enlace" data-contenido="1" href="#">Ocultar
+    contenidos</a>
+    <br/>
+    <p id="contenidos_2">[2] Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu,
+    consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+    posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+    aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit
+    convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus
+    non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna
+    consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a class="enlace" data-contenido="2" href="#">Ocultar
+    contenidos</a>
+    <br/>
+    <p id="contenidos_3">[3] Lorem ipsum dolor sit amet, consectetuer adipiscing
+    elit. Sed mattis enim vitae orci. Phasellus libero. Maecenas nisl arcu,
+    consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+    posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id,
+    aliquam vitae, ultrices porttitor, pede. Nullam sit amet nisl elementum elit
+    convallis malesuada. Phasellus magna sem, semper quis, faucibus ut, rhoncus
+    non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna
+    consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet,
+    consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a class="enlace" data-contenido="3" href="#">Ocultar
+    contenidos</a>
+</body>
+</html>
